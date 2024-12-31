@@ -31,7 +31,7 @@ class ShowModelResponse implements ResponseContract
     {
         return new self(
             modelfile: $attributes['modelfile'],
-            parameters: $attributes['parameters'],
+            parameters: $attributes['parameters'] ?? '',
             template: $attributes['template'],
             details: ListModelsModelDetailsResponse::from($attributes['details']),
             modelInfo: $attributes['model_info'],
